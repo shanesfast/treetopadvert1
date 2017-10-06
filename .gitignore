@@ -1,5 +1,6 @@
 _site
 .sass-cache
 .jekyll-metadata
-
+github
+github.pub
 config.codekit
