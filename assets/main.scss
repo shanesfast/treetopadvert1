@@ -2,7 +2,7 @@
 
 ---
 
-$baseurl: {{ site.baseurl }};
+$baseurl: "{{ site.baseurl }}";
 
 @import "normalize";
 @import "syntax";
