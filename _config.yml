@@ -8,7 +8,7 @@ baseurl: "/phayphotos" # the subpath of your site, e.g. /blog
 url: "https://shanesfast.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Social
-facebook: https://www.facebook.com/tayphay01 #Add your Facebook
+facebook: tayphay01 #Add your Facebook
 twitter: #Add your Twitter
 google-plus: #Add your Google+
 github: #Add your Github
