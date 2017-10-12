@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "New advertising opportunities!"
+title:  "Professional photos for any occasion"
 img: china_tiger_leaping_gorge.jpg
 date: 2017-10-03 00:00:00 +0200
 description: Curabitur vulputate enim at metus malesuada, in iaculis nisl tincidunt. Mauris dapibus ut ante ornare ullamcorper. Vivamus ultrices erat lorem. Phasellus pretium nisl ac elit porttitor, id condimentum velit aliquam.
