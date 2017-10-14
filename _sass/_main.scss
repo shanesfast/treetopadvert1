@@ -795,6 +795,14 @@ pre {
     }
 }
 
+//Headers
+.index-title {
+  font-family: 'Indie Flower', cursive;
+  margin-bottom: 2rem;
+  color: #2aa1a9;
+  font-size: 2.5rem;
+}
+
 // Sidebar
 .sidebar {
   background-image: url($baseurl + "/assets/img/passion_flower.jpg");
@@ -814,8 +822,8 @@ pre {
 
 .sidebar-menu {
   position: relative;
-  top: -15%;
-  padding: 0;
+  top: -5%;
+  padding-left: 20px;
   margin: 0 -2rem;
   .menu-items {
     list-style: none;
@@ -847,11 +855,7 @@ pre {
 
 .sidebar-logo {
   position: relative;
-  top: -24%;
-  padding: {
-    top: 20px;
-  }
-  text-align: center;
+  top: -2%;
   z-index: 9999;
   .logo {
     font-family: 'Indie Flower', cursive;
@@ -865,7 +869,7 @@ pre {
 
 .sidebar-social {
   position: relative;
-  top: -50%;
+  top: -5%;
   text-align: center;
   .social-items {
     display: inline-block;
@@ -888,9 +892,16 @@ pre {
 .content {
   position: relative;
   max-width: 80rem;
-  margin-left: 22rem;
-  margin-right: 2rem;
-  padding: 4rem 1rem;
+  margin: {
+    left: 22rem;
+    right: 2rem;
+  }
+  padding: {
+    top: 2rem;
+    bottom: 4rem;
+    right: 1rem;
+    left: 1rem;
+  }
 }
 
 .main-article, .page-article, .post {
@@ -1044,12 +1055,6 @@ img.post-image, img.page-img {
   }
   .content {
     margin: 0 auto;
-  }
-  .sidebar-logo, .sidebar-menu {
-    margin-bottom: 3rem;
-  }
-  .sidebar-logo {
-    position: relative;
   }
 }
 
