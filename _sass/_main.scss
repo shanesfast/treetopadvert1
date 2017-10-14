@@ -855,15 +855,10 @@ pre {
 
 .sidebar-logo {
   position: relative;
-  top: -2%;
+  top: -4%;
   z-index: 9999;
   .logo {
-    font-family: 'Indie Flower', cursive;
-    color: #4d79ff;
-    text-transform: uppercase;
-    text-decoration: none;
-    font-size: 2rem;
-    font-weight: 700;
+    font-size: 0;
   }
 }
 
@@ -1052,6 +1047,10 @@ img.post-image, img.page-img {
     position: inherit;
     width: 100%;
     text-align: center;
+  }
+  .sidebar-menu {
+    padding: 0;
+    margin: 0;
   }
   .content {
     margin: 0 auto;
