@@ -1,3 +1,40 @@
+/* INDEX PAGE HERO UNIT */
+
+.hero {
+  $hero-neat-grid: (
+  columns: 1,
+  gutter: 50px,
+  media: 50em,
+  );
+  align-items: center;
+  background-image: url($baseurl + "/assets/img/garden_buddha.jpg");
+  background-position: right;
+  background-size: none;
+  display: flex;
+  justify-content: center;
+  min-height: 25em;
+  padding: 2em;
+  margin-bottom: 2rem;
+
+  @include grid-media($hero-neat-grid) {
+    background-position: left;
+    background-size: cover;
+    justify-content: flex-end;
+  }
+
+  .hero-content {
+    max-width: 20em;
+    text-align: center;
+    color: #FFF;
+    }
+
+  .hero-logo {
+    width: 200px;
+    margin: auto;
+    border-radius: 50%;
+  }
+}
+
 /* GALLERY CARDS */
 
 .cards {
