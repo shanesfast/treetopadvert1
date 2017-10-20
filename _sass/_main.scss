@@ -7,6 +7,7 @@
  *    IE on Windows Phone and in iOS.
  */
 html {
+  font-size: 10px;
   line-height: 1.15;
   /* 1 */
   -ms-text-size-adjust: 100%;
@@ -797,8 +798,10 @@ pre {
 
 //Headers
 .index-title {
-  font-family: 'Indie Flower', cursive;
-  margin-bottom: 2rem;
+  font-family: 'Montserrat', sans-serif;
+  margin: {
+    bottom: 2rem;
+  }
   color: #2aa1a9;
   font-size: 2.5rem;
 }
@@ -946,6 +949,12 @@ img.post-image, img.page-img {
   padding-bottom: 1rem;
   margin-bottom: 1rem;
   border-bottom: 1px solid #ccc;
+}
+
+.page-border-left {
+  border: {
+    left: 1px solid #ccc;
+  }
 }
 
 .centered {

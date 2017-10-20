@@ -2,10 +2,11 @@
 
 .hero {
   $hero-neat-grid: (
-  columns: 1,
+  columns: 3,
   gutter: 50px,
   media: 50em,
   );
+
   align-items: center;
   background-image: url($baseurl + "/assets/img/garden_buddha.jpg");
   background-position: right;
@@ -38,9 +39,16 @@
 /* GALLERY CARDS */
 
 .cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  @include grid-container;
+
+  a {
+    text-decoration: none;
+    color: #515151;
+
+    &:hover {
+      color: #000;
+    }
+  }
 }
 
 .card {
@@ -59,30 +67,29 @@
   $card-image-hover-opacity: 0.7;
   $card-image-hover-color: #2aa1a9;
 
+  margin-bottom: 20px;
   background-color: $card-background;
   border: $card-border;
   border-radius: $base-border-radius;
   box-shadow: 0 2px 4px darken($base-background-color, 10%);
   cursor: pointer;
-  flex-basis: 30em;
-  flex-grow: 1;
-  margin: 0 $card-margin $base-spacing $card-margin;
-  position: relative;
   transition: all 0.2s ease-in-out;
+  overflow: hidden;
+  @include grid-column(3 of 9);
 
-  .card-image {
-    background-color: $card-image-hover-color;
-    height: 300px;
-    max-height: 280px;
-    overflow: hidden;
+    .card-image {
+      background-color: $card-image-hover-color;
+      max-height: 230px;
+      overflow: hidden;
 
-    img {
-      @include border-top-radius($base-border-radius);
-      opacity: 1;
-      transition: all 0.2s ease-in-out;
-      width: 100%;
+      img {
+        @include border-top-radius($base-border-radius);
+        opacity: 1;
+        transition: all 0.2s ease-in-out;
+        width: 100%;
+        min-height: 250px;
+      }
     }
-  }
 
   .card-header {
     background-color: $card-header-background;
@@ -119,5 +126,122 @@
     .card-header {
       background-color: $card-background;
     }
+  }
+}
+
+.first-card {
+  @include grid-column(6 of 9);
+}
+
+.last-card {
+  @include grid-column(6 of 9);
+}
+
+.card-altered {
+  $base-border-color: gainsboro !default;
+  $base-border-radius: 3px !default;
+  $base-background-color: white !default;
+  $base-spacing: 1.5em !default;
+  $action-color: #477DCA !default;
+  $dark-gray: #333 !default;
+  $base-font-color: $dark-gray !default;
+  $card-border-color: $base-border-color;
+  $card-border: 1px solid $card-border-color;
+  $card-background: lighten($card-border-color, 10%);
+  $card-header-background: $card-background;
+  $card-margin: 1em;
+  $card-image-hover-opacity: 0.7;
+  $card-image-hover-color: #2aa1a9;
+
+  min-width: 500px;
+  margin-bottom: 20px;
+  background-color: $card-background;
+  border: $card-border;
+  border-radius: $base-border-radius;
+  box-shadow: 0 2px 4px darken($base-background-color, 10%);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  @include grid-column(4 of 10);
+
+  .card-image-altered {
+    background-color: $card-image-hover-color;
+    max-height: 300px;
+    overflow: hidden;
+
+    img {
+      @include border-top-radius($base-border-radius);
+      opacity: 1;
+      transition: all 0.2s ease-in-out;
+      width: 100%;
+      min-height: 350px;
+    }
+  }
+
+  &:focus,
+  &:hover {
+    cursor: pointer;
+
+    img {
+      opacity: $card-image-hover-opacity;
+    }
+  }
+
+  &:active {
+    background-color: $card-background;
+  }
+
+  figcaption {
+    text-align: center;
+    padding: 20px;
+    font-size: 1rem;
+    color: #5ab;
+  }
+}
+
+/// 575 px screen width
+
+@media only screen and (max-width: 35.938em) {
+  .card-altered {
+    min-width: 300px;
+  }
+}
+
+/// 768 px screen width
+
+@media only screen and (max-width: 48em) {
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .card-altered {
+    margin: {
+      left: 0;
+      right: 0;
+    }
+
+    figcaption {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+/// 1145 px screen width
+
+@media only screen and (max-width: 71.563em) {
+  .card {
+    @include grid-column(1 of 1);
+    margin-left: 0;
+  }
+
+  .first-card {
+    @include grid-column(1 of 1);
+    margin-left: 0;
+  }
+
+  .last-card {
+    @include grid-column(1 of 1);
+    margin-left: 0;
   }
 }
