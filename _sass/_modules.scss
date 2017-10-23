@@ -1,39 +1,214 @@
 /* INDEX PAGE HERO UNIT */
 
 .hero {
-  $hero-neat-grid: (
-  columns: 3,
-  gutter: 50px,
-  media: 50em,
-  );
-
-  align-items: center;
-  background-image: url($baseurl + "/assets/img/garden_buddha.jpg");
-  background-position: right;
-  background-size: none;
-  display: flex;
-  justify-content: center;
-  min-height: 25em;
-  padding: 2em;
+  position: relative;
+  height: 25em;
   margin-bottom: 2rem;
-
-  @include grid-media($hero-neat-grid) {
-    background-position: left;
-    background-size: cover;
-    justify-content: flex-end;
-  }
+  border: 2px solid white;
 
   .hero-content {
+    position: absolute;
+    top: 8%;
+    right: 3%;
     max-width: 20em;
     text-align: center;
     color: #FFF;
-    }
+    background-color: rgba(42, 161, 169, 0.8);
+    border: solid 2px;
+    padding: 1rem;
+    z-index: 99;
+   }
 
   .hero-logo {
     width: 200px;
     margin: auto;
     border-radius: 50%;
+    border: solid 2px;
   }
+
+  .bg-1 {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-image: url($baseurl + "/assets/img/hero_slide/garden_buddha.jpg");
+    @include animation(fade 120s infinite 5s);
+  }
+
+  .bg-2 {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-image: url($baseurl + "/assets/img/hero_slide/lanterns.jpg");
+    @include animation(fade2 120s infinite 5s);
+  }
+
+  .bg-3 {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-image: url($baseurl + "/assets/img/hero_slide/lilly.jpg");
+    @include animation(fade3 120s infinite 5s);
+  }
+
+  .bg-4 {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-image: url($baseurl + "/assets/img/hero_slide/little_flowers.jpg");
+    @include animation(fade4 120s infinite 5s);
+  }
+
+  .bg-5 {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-image: url($baseurl + "/assets/img/hero_slide/long_flower.jpg");
+    @include animation(fade5 120s infinite 5s);
+  }
+
+  .bg-6 {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-image: url($baseurl + "/assets/img/hero_slide/passion.jpg");
+    @include animation(fade6 120s infinite 5s);
+  }
+
+  .bg-7 {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-image: url($baseurl + "/assets/img/hero_slide/pots.jpg");
+    @include animation(fade7 120s infinite 5s);
+  }
+
+  .bg-8 {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-image: url($baseurl + "/assets/img/hero_slide/rose.jpg");
+    @include animation(fade8 120s infinite 5s);
+  }
+}
+
+@keyframes fade
+{
+  0%  {opacity: 1}
+  12% {opacity: 0}
+  25% {opacity: 0}
+  37% {opacity: 0}
+  50% {opacity: 0}
+  62% {opacity: 0}
+  75% {opacity: 0}
+  87% {opacity: 0}
+  100% {opacity: 1}
+}
+@keyframes fade2
+{
+  0%  {opacity: 0}
+  12% {opacity: 1}
+  25% {opacity: 0}
+  37% {opacity: 0}
+  50% {opacity: 0}
+  62% {opacity: 0}
+  75% {opacity: 0}
+  87% {opacity: 0}
+  100% {opacity: 0}
+}
+@keyframes fade3
+{
+  0%  {opacity: 0}
+  12% {opacity: 0}
+  25% {opacity: 1}
+  37% {opacity: 0}
+  50% {opacity: 0}
+  62% {opacity: 0}
+  75% {opacity: 0}
+  87% {opacity: 0}
+  100% {opacity: 0}
+}
+@keyframes fade4
+{
+  0%  {opacity: 0}
+  12% {opacity: 0}
+  25% {opacity: 0}
+  37% {opacity: 1}
+  50% {opacity: 0}
+  62% {opacity: 0}
+  75% {opacity: 0}
+  87% {opacity: 0}
+  100% {opacity: 0}
+}
+@keyframes fade5
+{
+  0%  {opacity: 0}
+  12% {opacity: 0}
+  25% {opacity: 0}
+  37% {opacity: 0}
+  50% {opacity: 1}
+  62% {opacity: 0}
+  75% {opacity: 0}
+  87% {opacity: 0}
+  100% {opacity: 0}
+}
+@keyframes fade6
+{
+  0%  {opacity: 0}
+  12% {opacity: 0}
+  25% {opacity: 0}
+  37% {opacity: 0}
+  50% {opacity: 0}
+  62% {opacity: 1}
+  75% {opacity: 0}
+  87% {opacity: 0}
+  100% {opacity: 0}
+}
+@keyframes fade7
+{
+  0%  {opacity: 0}
+  12% {opacity: 0}
+  25% {opacity: 0}
+  37% {opacity: 0}
+  50% {opacity: 0}
+  62% {opacity: 0}
+  75% {opacity: 1}
+  87% {opacity: 0}
+  100% {opacity: 0}
+}
+@keyframes fade8
+{
+  0%  {opacity: 0}
+  12% {opacity: 0}
+  25% {opacity: 0}
+  37% {opacity: 0}
+  50% {opacity: 0}
+  62% {opacity: 0}
+  75% {opacity: 0}
+  87% {opacity: 1}
+  100% {opacity: 0}
 }
 
 /* GALLERY CARDS */
