@@ -762,6 +762,12 @@ a {
   }
 }
 
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 blockquote {
   border-left: 5px solid #15F3A8;
   padding-left: 1.1rem;
@@ -903,6 +909,10 @@ pre {
     bottom: 4rem;
     right: 1rem;
     left: 1rem;
+  }
+
+  p {
+    margin: 0 0 1.75em 0;
   }
 }
 
