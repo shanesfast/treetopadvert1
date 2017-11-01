@@ -492,7 +492,8 @@
   @include grid-column(3 of 9);
 
     .card-image {
-      background-color: $card-image-hover-color;
+      display: flex;
+      background-color: #000;
       max-height: 230px;
       overflow: hidden;
 
@@ -502,6 +503,7 @@
         transition: all 0.2s ease-in-out;
         width: 100%;
         min-height: 250px;
+        object-fit: contain;
       }
     }
 
@@ -511,6 +513,7 @@
     border-radius: $base-border-radius $base-border-radius 0 0;
     font-weight: bold;
     line-height: 1.5em;
+    text-align: center;
     padding: ($base-spacing / 3) ($base-spacing / 2);
     transition: all 0.2s ease-in-out;
   }
@@ -518,6 +521,7 @@
   .card-copy {
     font-size: 0.9em;
     line-height: 1.5em;
+    text-align: center;
     padding: ($base-spacing / 2) ($base-spacing / 2);
 
     p {
@@ -657,6 +661,12 @@
   .last-card {
     @include grid-column(1 of 1);
     margin-left: 0;
+  }
+}
+
+@media only screen and (min-width: 71.563em) {
+  .card {
+    min-height: 21rem;
   }
 }
 
