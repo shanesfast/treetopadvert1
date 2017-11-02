@@ -35,7 +35,7 @@ $(document).ready(function() {
     e.preventDefault();
   })
 
-  $(".closeModal").click(function(e) {
+  $(".closeModal, .modal").click(function(e) {
     $(".modal, .closeModal").fadeOut(300);
     e.preventDefault();
   })
